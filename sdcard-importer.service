@@ -1,0 +1,10 @@
+[Unit]
+Description=Import files from mounted SD card and notify administrator of success
+Requires=media-sdcard.mount
+After=media-sdcard.mount
+
+[Service]
+ExecStart=/usr/local/bin/sd-importer.sh
+
+[Install]
+WantedBy=media-sdcard.mount
